@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16ee6e33-9afa-4b8d-81b7-9c0414ec17c1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ReplacetheSubstringforBalancedString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/NumberofSubsequencesThatSatisfytheGiveSumCondition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,7 +44,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Everyday" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ShortestSubarraytobeRemovedtoMakeArraySorted" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ShortestSubarraytobeRemovedtoMakeArraySorted" />
       <module name="Everyday" />
@@ -52,6 +61,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.ShortestSubarraytobeRemovedtoMakeArraySorted" />
       </list>
     </recent_temporary>
@@ -137,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616647143055</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="3.25">
+      <created>1616727475844</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1616727475844</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -165,7 +182,8 @@
     <MESSAGE value="3.22" />
     <MESSAGE value="3.23" />
     <MESSAGE value="3.24" />
-    <option name="LAST_COMMIT_MESSAGE" value="3.24" />
+    <MESSAGE value="3.25" />
+    <option name="LAST_COMMIT_MESSAGE" value="3.25" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
