@@ -1,53 +1,72 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
         Main main = new Main();
-        System.out.println(main.numSubseq(new int[]{2, 3, 3, 4, 6, 7}, 12));
+        System.out.println(main.maxSum(new int[]{1, 3, 5, 7, 9}, new int[]{3, 5, 100}));
     }
 
-    public List<List<Integer>> numSubseq(int[] nums, int target) {
-        Arrays.sort(nums);
-        List<List<Integer>> res = new ArrayList<>();
-        List<Integer> cur = new ArrayList<>();
-        dfs(nums, 0, new Integer[1], new int[]{target}, new int[]{0}, cur, res, target);
-        System.out.println(res.size());
+    public int maxSum(int[] nums1, int[] nums2) {
+        // find the common numbers of two arrays
+        // divide each array into multiple sections by common numbers ans save them into map [number, sum]
+        // add them up
+        Map<Integer, Integer> map = new HashMap<>();
+        int i = 0, j = 0;
+        while (i < nums1.length && j < nums2.length) {
+            int a = nums1[i], b = nums2[j];
+            if (a < b) {
+                i++;
+            } else if (a > b) {
+                j++;
+            } else {
+                map.put(a, a);
+                i++;
+                j++;
+            }
+        }
+        int k = 0;
+        while (k < nums1.length) {
+            int n = nums1[k];
+            if (k == 0 || map.containsKey(n)) {
+                if (k != 0) k++;
+                int curSum = k == 0 ? 0 : map.get(n);
+                while (k < nums1.length && !map.containsKey(nums1[k])) {
+                    curSum += nums1[k];
+                    k++;
+                }
+                if (!map.containsKey(n)) {
+                    map.put(0, curSum);
+                } else {
+                    map.put(n, curSum);
+                }
+            }
+        }
+        k = -1;
+        while (k < nums2.length) {
+            int n = k == -1 ? -1 : nums2[k];
+//            if (k == 0 && map.containsKey(n)) {
+//                k++;
+//            }
+            if (k == -1 || map.containsKey(n)) {
+                int curSum = k == -1 ? 0 : n;
+                k++;
+                while (k < nums2.length && !map.containsKey(nums2[k])) {
+                    curSum += nums2[k];
+                    k++;
+                }
+                if (!map.containsKey(n)) {
+                    map.put(0, Math.max(curSum, map.get(0)));
+                } else {
+                    map.put(n, Math.max(curSum, map.get(n)));
+                }
+            }
+            if (k != 0) k++;
+        }
+
+        int res = 0;
+        for (int v : map.values()) {
+            res += v;
+        }
         return res;
     }
-
-    private void dfs(int[] nums, int index, Integer[] min, int[] remain, int[] count, List<Integer> cur, List<List<Integer>> res, int target) {
-        if (index == nums.length) {
-            if (count[0] != 1 || remain[0] >= (int) Math.ceil(target / 2.0)) {
-                res.add(new ArrayList<>(cur));
-            }
-            return;
-        }
-        for (int i = index; i < nums.length; i++) {
-            //add
-            Integer minTemp = min[0];
-            int remainTemp = remain[0], countTemp = count[0];
-            if (remain[0] >= nums[i]) {
-
-                if (min[0] == null) {
-                    min[0] = nums[i];
-                }
-                remain[0] -= nums[i];
-                count[0]++;
-                cur.add(nums[i]);
-            }
-            dfs(nums, i + 1, min, remain, count, cur, res, target);
-            min[0] = minTemp;
-            remain[0] = remainTemp;
-            if (count[0] > countTemp) {
-                count[0] = countTemp;
-                cur.remove(cur.size() - 1);
-            }
-
-        }
-
-
-    }
-
 }
