@@ -4,32 +4,39 @@ import java.util.stream.Collectors;
 public class Main {
     public static void main(String[] args) {
         Main main = new Main();
-        System.out.println(main.findMaxProfit(new int[]{2, 3, 4, 5, 2}));
+        System.out.println(main.minmaxGasDist(new int[]{23, 24, 36, 39, 46, 56, 57, 65, 84, 98}, 1));
     }
 
-    public int findMaxProfit(int[] price) {
-        // keep track of the maximum profit gained
-        int profit = 0;
-
-        // initialize the local minimum to the first element's index
-        int j = 0;
-
-        // start from the second element
-        for (int i = 1; i < price.length; i++) {
-            // update the local minimum if a decreasing sequence is found
-            if (price[i - 1] > price[i]) {
-                j = i;
-            }
-
-            // sell shares if the current element is the peak,
-            // i.e., (`previous <= current > next`)
-            if (price[i - 1] <= price[i] &&
-                    (i + 1 == price.length || price[i] > price[i + 1])) {
-                profit += (price[i] - price[j]);
-                System.out.printf("Buy on day %d and sell on day %d\n", j + 1, i + 1);
+    public double minmaxGasDist(int[] stations, int k) {
+        int maxGap = 0;
+        for (int i = 1; i < stations.length; i++) {
+            maxGap = Math.max(maxGap, stations[i] - stations[i - 1]);
+        }
+        double left = 0, right = maxGap;
+        while (left < right - 1) {
+            double mid = left + (right - left) / 2;
+            if (canMeet(stations, k, mid)) {
+                right = mid;
+            } else {
+                left = mid + 1;
             }
         }
+        return canMeet(stations, k, left) ? left : right;
+    }
 
-        return profit;
+    private boolean canMeet(int[] A, int k, double max) {
+        int count = 0;
+        for (int i = 1; i < A.length; i++) {
+            int gap = A[i] - A[i - 1];
+            int temp = 1;
+            while (gap / (double) temp > max) {
+                temp++;
+            }
+            count += (temp - 1);
+            if (count > k) {
+                return false;
+            }
+        }
+        return true;
     }
 }
