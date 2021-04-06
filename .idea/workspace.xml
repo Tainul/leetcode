@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16ee6e33-9afa-4b8d-81b7-9c0414ec17c1" name="Default Changelist" comment="" />
+    <list default="true" id="16ee6e33-9afa-4b8d-81b7-9c0414ec17c1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/out/production/Everyday/CapacityToShipPackagesWithinDDays.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Everyday/DivideChocolate.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Everyday/FindtheSmallestDivisorGivenaThreshold.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Everyday/GettheMaximumScore.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Everyday/GrumpyBookstoreOwner.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Everyday/KokoEatingBananas.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Everyday/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Everyday/MaximumScoreofaGoodSubarray.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Everyday/MeetingScheduler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Everyday/MinimumNumberofArrowstoBurstBalloons.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Everyday/MinimumNumberofDaystoMakemBouquets.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Everyday/NonOverlappingIntervals.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Everyday/NumberofSubsequencesThatSatisfytheGiveSumCondition.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Everyday/NumberofWaysWhereSquareofNumberisEqualtoProductofTwoNumbers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Everyday/PerfectRectangle.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Everyday/RectangleAreaII.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Everyday/RemoveCoveredIntervals.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Everyday/RemoveInterval.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Everyday/ReplacetheSubstringforBalancedString.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Everyday/ShortestSubarraytobeRemovedtoMakeArraySorted.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Everyday/SplitArrayLargestSum.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Everyday/TheSkylineProblem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
