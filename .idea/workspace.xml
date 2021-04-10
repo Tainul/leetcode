@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16ee6e33-9afa-4b8d-81b7-9c0414ec17c1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Tree/FlipBinaryTreeToMatchPreorderTraversal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Everyday/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Everyday/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
@@ -247,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617856049297</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="4.8">
+      <created>1617947716805</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1617947716805</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -288,7 +294,8 @@
     <MESSAGE value="4.4" />
     <MESSAGE value="4.5" />
     <MESSAGE value="4.6" />
-    <option name="LAST_COMMIT_MESSAGE" value="4.6" />
+    <MESSAGE value="4.8" />
+    <option name="LAST_COMMIT_MESSAGE" value="4.8" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -301,8 +308,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="45" />
+          <line>52</line>
+          <option name="timeStamp" value="47" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

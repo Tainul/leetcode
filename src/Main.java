@@ -29,46 +29,36 @@ public class Main {
 //        root.right = new TreeNode(2);
 //        root.right.left = new TreeNode(4);
 //        root.right.right = new TreeNode(3);
-        System.out.println(main.flipMatchVoyage(root, new int[]{2, 1}));
+        System.out.println(main.recoverFromPreorder("1-2--3--4-5--6--7"));
     }
 
-    public List<Integer> flipMatchVoyage(TreeNode root, int[] voyage) {
-        // parent and left or right
-        Map<Integer, int[]> map = new HashMap<>();
-        int LEFT = -1, RIGHT = 1;
-        int[] origin = new int[voyage.length];
-        dfs(null, root, new int[]{-1}, map);
-        List<Integer> res = new ArrayList<>();
-        //parent is key, order is value
-        Map<Integer, Integer> orderMap = new HashMap<>();
-        boolean consistent = true;
-        for (int i = 0; i < voyage.length; i++) {
-            int v = voyage[i];
-            if (map.containsKey(v)) {
-                if (map.get(v)[1] != i) {
-                    consistent = false;
-                }
-                if (orderMap.containsKey(map.get(v)[0])) {
-                    if (map.get(v)[1] < orderMap.get(map.get(v)[0])) {
-                        res.add(map.get(v)[0]);
-                    }
-                } else {
-                    orderMap.put(map.get(v)[0], map.get(v)[1]);
-                }
-            }
-        }
-        return (consistent || res.size() != 0) ? res : Arrays.asList(-1);
+    public TreeNode recoverFromPreorder(String S) {
+        TreeNode root = new TreeNode(S.charAt(0) - '0');
+        dfs(root, 0, new int[]{1}, S);
+        return root;
     }
 
-    private void dfs(TreeNode parent, TreeNode node, int[] index, Map<Integer, int[]> map) {
-        if (node == null) {
-            return;
+    private TreeNode dfs(TreeNode root, int depth, int[] index, String s) {
+        if (root == null) {
+            return null;
         }
+        int d = 0;
+        while (s.charAt(index[0]) == '-') {
+            d++;
+            index[0]++;
+        }
+        if (d < depth + 1) {
+            return null;
+        }
+        TreeNode node = new TreeNode(s.charAt(index[0]) - '0');
         index[0]++;
-        if (parent != null) {
-            map.put(node.val, new int[]{parent.val, index[0]});
+        if (root.left == null) {
+            root.left = node;
+            dfs(root.left, depth + 1, index, s);
+        } else if (root.right == null) {
+            root.right = node;
+            dfs(root.right, depth + 1, index, s);
         }
-        dfs(node, node.left, index, map);
-        dfs(node, node.right, index, map);
+        return node;
     }
 }
